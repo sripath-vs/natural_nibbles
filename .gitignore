@@ -1,0 +1,23 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Design tool scratch material (Napkin, Stitch, etc.)
+scraps/
+uploads/
+
+# Dev-only artifacts
+.screenshots/
+*.log
+.tmp/
+
+# Saved canvas/tweaks state (regenerated at runtime)
+.design-canvas.state.json
+
+# Node (if anyone adds tooling later)
+node_modules/
+dist/
+.vite/

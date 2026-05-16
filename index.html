@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natural Nibbles — Food as Healing</title>
+  <meta name="description" content="Natural Nibbles is an organic food and cloud kitchen rooted in Ayurvedic principles. Order traditional meals, carry Ayurvedic flavour mixes, or open a Natural Nibbles kitchen in your city." />
+
+  <link rel="icon" type="image/png" href="assets/logo-natural-nibbles.png" />
+
+  <!-- Default type stack: Lora + Source Serif + Caveat (matches "forest" palette + "lora" type defaults) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="app/styles.css" />
+
+  <!-- React + Babel from CDN. For production-grade performance, swap to a Vite/esbuild bundle. -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+  <style>
+    html, body, #root { margin: 0; min-height: 100%; }
+    body {
+      background: var(--nn-paper, #FAF5E8);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Application scripts only — no design canvas, no tweaks panel, no iOS frame. Load order matters. -->
+  <script type="text/babel" src="app/components.jsx"></script>
+  <script type="text/babel" src="app/quiz.jsx"></script>
+  <script type="text/babel" src="app/pages.jsx"></script>
+  <script type="text/babel" src="app/app.jsx"></script>
+
+  <script type="text/babel" data-presets="env,react">
+    const { useState, useEffect } = React;
+
+    const MOBILE_BREAKPOINT = 760;
+    const detectDevice = () =>
+      window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches ? "mobile" : "desktop";
+
+    function Site() {
+      const [device, setDevice] = useState(detectDevice);
+
+      useEffect(() => {
+        // Apply default brand palette, type pairing, and layout.
+        applyPalette("forest");
+        applyType("lora");
+        applyLayout("editorial");
+
+        const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`);
+        const onChange = () => setDevice(detectDevice());
+        mql.addEventListener("change", onChange);
+        return () => mql.removeEventListener("change", onChange);
+      }, []);
+
+      return <NaturalNibblesApp device={device} initialPage="home" />;
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<Site />);
+  </script>
+</body>
+</html>
