@@ -21,3 +21,6 @@ uploads/
 node_modules/
 dist/
 .vite/
+
+# Tool indexes
+.codegraph/
