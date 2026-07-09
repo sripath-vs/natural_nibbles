@@ -80,7 +80,7 @@ function NNNav({ page, onNavigate, device }) {
         </div>
         <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
           <button className="nn-nav-cta" onClick={() => onNavigate("contact")}>
-            Book a consult
+            Order now
           </button>
           {device === "mobile" && (
             <button
@@ -298,16 +298,16 @@ function NNFooter({ onNavigate }) {
           <div className="nn-footer-brand">
             <NNLogo onClick={() => onNavigate("home")} height={64} tone="cream" />
             <p className="nn-footer-tagline">
-              An organic cloud kitchen reviving forgotten Indian culinary traditions — food prepared as an ancient system of healing.
+              An organic cloud kitchen from Hyderabad — traditional South Indian munchies, healing Ayurvedic toppings, and food treated as an ancient system of healing.
             </p>
           </div>
           <div className="nn-footer-col">
             <h5>The Kitchen</h5>
             <ul>
-              <li><button onClick={() => onNavigate("products")}>Golden Khichdi</button></li>
-              <li><button onClick={() => onNavigate("products")}>Tulsi Honey</button></li>
-              <li><button onClick={() => onNavigate("products")}>Triphala Ghee</button></li>
-              <li><button onClick={() => onNavigate("products")}>Seasonal box</button></li>
+              <li><button onClick={() => onNavigate("products")}>Just Munch</button></li>
+              <li><button onClick={() => onNavigate("products")}>Healthy Munch</button></li>
+              <li><button onClick={() => onNavigate("products")}>Toppings</button></li>
+              <li><button onClick={() => onNavigate("products")}>Dog Munch</button></li>
             </ul>
           </div>
           <div className="nn-footer-col">

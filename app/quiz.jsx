@@ -49,25 +49,25 @@ const DOSHA_RESULTS = {
     name: "Vata",
     headline: "You move like wind.",
     description:
-      "Vata governs movement — breath, circulation, the rustle of thought. When it's strong, you are creative and quick. When it's spilling over, you are dry, cold, scattered, and your sleep frays. The kitchen feeds you warm, oily, grounding things: long-cooked grains, ghee, root vegetables, warming spices.",
-    recommended: ["Golden Turmeric Khichdi", "Triphala Ghee", "Ashwagandha Moon Milk"],
-    ingredients: ["Ghee", "Black sesame", "Ajwain", "Ashwagandha"],
+      "Vata governs movement — breath, circulation, the rustle of thought. When it's strong, you are creative and quick. When it's spilling over, you are dry, cold, scattered, and your sleep frays. We steer you toward our richer, more grounding munchies — and a spoon of Arogya to keep the appetite kind.",
+    recommended: ["Cashew Masala", "Corn Masala", "Arogya topping"],
+    ingredients: ["Cashew", "Corn", "Arogya herbs"],
   },
   pitta: {
     name: "Pitta",
     headline: "You burn bright.",
     description:
-      "Pitta is fire — digestion, ambition, the heat that builds and transforms. When it's balanced, you are sharp and decisive. When it's too high, your gut burns, your skin flares, your patience thins. The kitchen feeds you cool, sweet, slightly bitter foods: rice, coconut, cilantro, fennel, leafy greens.",
-    recommended: ["Cooling Coconut Khichdi", "Tulsi-Mint Tisane", "Aloe-Saffron Ghee"],
-    ingredients: ["Fennel", "Coconut", "Cilantro", "Saffron"],
+      "Pitta is fire — digestion, ambition, the heat that builds and transforms. When it's balanced, you are sharp and decisive. When it's too high, your gut burns, your skin flares, your patience thins. We steer you toward our lighter, cooling munchies — and a spoon of Swasthya to settle the gut.",
+    recommended: ["Mango Masala", "Puffed Rice Masala", "Swasthya topping"],
+    ingredients: ["Raw mango", "Puffed rice", "Swasthya herbs"],
   },
   kapha: {
     name: "Kapha",
     headline: "You hold the earth.",
     description:
-      "Kapha is structure — bones, immunity, the steady hum that keeps you whole. When balanced, you are grounded and warm. When heavy, you feel stuck, congested, slow. The kitchen feeds you light, warm, lightly spiced foods: barley, mung, ginger, pepper, mustard greens.",
-    recommended: ["Mung Sprout Khichdi", "Ginger-Pepper Decoction", "Mustard Honey"],
-    ingredients: ["Ginger", "Black pepper", "Trikatu", "Bitter melon"],
+      "Kapha is structure — bones, immunity, the steady hum that keeps you whole. When balanced, you are grounded and warm. When heavy, you feel stuck, congested, slow. We steer you toward our brighter, spicier munchies — and a spoon of Raksha for a little lift.",
+    recommended: ["Bajji Masala", "Sprouts Masala", "Raksha topping"],
+    ingredients: ["Green chilli", "Green-gram sprouts", "Raksha herbs"],
   },
 };
 
@@ -131,7 +131,7 @@ function NNDoshaQuiz() {
           <div className="nn-quiz-actions">
             <button className="nn-btn-arrow" onClick={reset}>Take the quiz again</button>
             <button className="nn-btn nn-btn--primary" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              Book a consult
+              Order now
             </button>
           </div>
         </div>
