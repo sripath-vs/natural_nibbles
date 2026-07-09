@@ -704,6 +704,16 @@ function AboutPage({ onNavigate, device }) {
                   </p>
                 </div>
               </div>
+              <div style={{ marginTop: 24 }}>
+                <span className="nn-eyebrow">Where we're headed</span>
+                <p style={{ fontSize: 17, lineHeight: 1.7, color: "var(--nn-ink-2)", marginTop: 6 }}>
+                  We're growing beyond a snack brand into an integrated
+                  healthy-food platform — pairing Ayurvedic science with
+                  clean-label FoodTech, farmer-first sourcing, smart retail and
+                  sustainability, to keep fresh, functional nutrition honest,
+                  affordable and close to home.
+                </p>
+              </div>
               <blockquote className="nn-founder-quote">
                 Tradition simplified. Healing, prepared with intention.
               </blockquote>
@@ -760,7 +770,7 @@ function AboutPage({ onNavigate, device }) {
       <section className="nn-section">
         <div className="nn-container">
           <NNReveal>
-            <NNEyebrowRow>What we won't do</NNEyebrowRow>
+            <NNEyebrowRow>What we always do</NNEyebrowRow>
           </NNReveal>
           <div className="nn-feature">
             <NNReveal>
