@@ -24,3 +24,10 @@ dist/
 
 # Tool indexes
 .codegraph/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
