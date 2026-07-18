@@ -44,13 +44,14 @@ function HomePage({ onNavigate, device }) {
             </div>
             <div>
               <NNReveal delay={120}>
-                <div className="nn-img nn-img--soft" style={{ aspectRatio: "1179 / 649" }}>
-                  <img
-                    src="assets/natural-nibbles-10-years-banner.jpg"
-                    alt="Natural Nibbles — Tradition Simplified. Celebrating 10 years of natural goodness, surrounded by fresh herbs, nuts and dry fruits."
-                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                  />
-                </div>
+                <NNImage
+                  tone="saffron"
+                  pattern="lotus"
+                  shape="soft"
+                  title="Hero photograph"
+                  caption="Hands stirring fresh turmeric into a brass pot of ghee, lit by morning window-light. Spices visible — black mustard seed, ajwain, curry leaf. No styling."
+                  style={{ aspectRatio: "4 / 5" }}
+                />
               </NNReveal>
             </div>
           </div>
@@ -502,7 +503,7 @@ function ProductsPage({ onNavigate, device }) {
           <div style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
             {[
               { group: "Desi", items: ["Jal Jeera", "Nimbu Fizz", "Coconut Water"] },
-              { group: "Thirst killers", items: ["Chilled Water", "Diet Coke"] },
+              { group: "Thirst killers", items: ["Chilled Water"] },
             ].map((b, i) => (
               <NNReveal key={b.group} delay={i * 80}>
                 <div className="nn-info-card" style={{ height: "100%" }}>
@@ -999,7 +1000,7 @@ function ContactPage({ onNavigate, device }) {
         </div>
       </section>
 
-      {/* DOSHA QUIZ — section hidden per request
+      {/* DOSHA QUIZ */}
       <section className="nn-section nn-section--cream-2" id="quiz">
         <div className="nn-container">
           <NNReveal>
@@ -1022,7 +1023,6 @@ function ContactPage({ onNavigate, device }) {
           </NNReveal>
         </div>
       </section>
-      */}
     </div>
   );
 }
